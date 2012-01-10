@@ -5,6 +5,8 @@
 openssl2nettle is a small tool to convert openssl keys to the s-expression format used by libnettle.
 
 Currently only RSA private keys as used by OpenSSH (aka ~/.ssh/id_rsa) are supported using openssl2nettle-rsa
+Unlike pkcs1-conv (distributed with libnettle), this uses openssl to read the openssl key and should therefore work with all openssl rsa keys.
+(I only wrote this because pkcs1-conv won't work with my encrypted id_rsa key.)
 
 ## Requirements
 
